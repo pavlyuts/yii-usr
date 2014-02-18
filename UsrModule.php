@@ -280,7 +280,7 @@ class UsrModule extends CWebModule
 			$hybridauthConfig = array(
 				'base_url' => Yii::app()->createAbsoluteUrl('/'.$this->id.'/hybridauth/callback'),
 				'providers' => $this->hybridauthProviders,
-			) + $hybridauthDebug;
+			) + $this->hybridauthDebug;
 			require dirname(__FILE__) . '/extensions/Hybrid/Auth.php';
 			$this->_hybridauth = new Hybrid_Auth($hybridauthConfig);
 		}
